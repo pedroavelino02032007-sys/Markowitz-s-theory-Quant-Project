@@ -1,29 +1,30 @@
 Modern Portfolio Theory Optimizer
-This quantitative finance project applies Markowitz's Modern Portfolio Theory (MPT) to construct and optimize investment portfolios. The code calculates optimal asset weights to maximize returns for a given level of risk and visualizes the results.
 
-Project Structure
-Efficient frontier: This script processes historical asset data, simulates thousands of random portfolios, and plots the efficient frontier. It identifies the portfolio with the maximum Sharpe ratio and the portfolio with the global minimum volatility.
+This quantitative finance project applies Markowitz's Modern Portfolio Theory (MPT) and advanced risk analytics to construct, optimize, and evaluate investment portfolios using live market data.
 
-Risk Analytics model: This module evaluates the portfolio's performance. It calculates key risk metrics to help investors understand the potential downside and risk-adjusted returns of their asset allocation.
+#Project Structure
 
-Prerequisites
-You need Python installed along with the following libraries:
+#Efficient frontier : Pulls historical price data from yfinance, simulates random portfolio weightings and plots the efficient frontier.
 
-pandas
+#Risk Analytics model: Performs deep multi-factor and downside risk evaluation on the portfolio. It calculates expected return, portfolio volatility, Sharpe ratio, Monte Carlo growth simulations, capital weight vs. risk contributions, and max drawdown.
 
-numpy
+#Prerequisites
 
-matplotlib
+You need to install the following libraries:
 
-scipy
+* `yfinance`
+* `pandas`
+* `numpy`
+* `matplotlib`
+* `scipy`
+* `statsmodels`
 
-How to Use
-Clone this repository to your local machine.
+#How to Use
 
-Ensure you have the required dependencies installed.
+1. Clone this repository 
+2. Install the required dependencies using pip:
 
-Run the Efficient frontier script to generate the optimal weights and view the plot.
+pip install yfinance pandas numpy matplotlib scipy statsmodels
 
-Pass the generated weights into the Risk Analytics model to output the risk metrics.
-
-Reply with the answers to the questions above, and I will tailor this README to fit your exact code.
+3. Run the Efficient frontier script to generate optimal asset weights for your chosen tickers
+4. Feed those asset weights into the Risk Analytics model to output the performance charts, factor exposures, and risk metrics
